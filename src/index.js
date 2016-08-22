@@ -4,13 +4,13 @@ import {FigureFactory} from "./FigureFactory";
 var figure;
 var canvas = document.getElementById("canvas");
 
-$(document.body).on('click','input[name="clear"]', function(){
+$('input[name="clear"]').on('click', function(){
     $('.job').addClass('hide');
     $('.create').removeClass('hide');
     canvas.width = canvas.width;
 });
 
-$(document.body).on('click','input[name="addFigure"]', function(){
+$('input[name="addFigure"]').on('click', function(){
     $('.create').addClass('hide');
     $('.job').removeClass('hide');
     canvas.width = canvas.width;
@@ -18,19 +18,19 @@ $(document.body).on('click','input[name="addFigure"]', function(){
     figure.render(200,200);
 });
     
-$(document.body).on('click','input[name="increase"]', function(){
+$('input[name="increase"]').on('click', function(){
     canvas.width = canvas.width;
     figure.increase(1.1);
     figure.render(200,200);
 });
 
-$(document.body).on('click','input[name="decrease"]', function(){
+$('input[name="decrease"]').on('click', function(){
     canvas.width = canvas.width;
     figure.decrease(1.1);
     figure.render(200,200);
 });
 
-$(document.body).on('click','input[name="getArea"]', function(){
+$('input[name="getArea"]').on('click', function(){
     alert(figure.getArea());
 });
 
